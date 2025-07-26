@@ -20,6 +20,6 @@ GEMINI_API_KEY=<key>
 
 ```bash
 crewai install
-streamlit run src/textbook_to_quiz_generator/app.py
+streamlit run src/quizforge_ai/app.py
 ```
 
