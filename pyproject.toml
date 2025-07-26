@@ -1,0 +1,29 @@
+[project]
+name = "quizforge_ai"
+version = "0.1.0"
+description = "PDF to Quiz-Generator using crewAI"
+authors = [{ name = "Your Name", email = "you@example.com" }]
+requires-python = ">=3.10,<3.13"
+dependencies = [
+    "crewai[tools]>=0.121.1,<1.0.0",
+    "streamlit>=1.32.0",
+    "PyPDF2>=3.0.0",
+    "python-dotenv>=1.0.0",
+    "langchain>=0.1.0",
+    "langchain-openai>=0.0.5",
+    "PyYAML>=6.0.1"
+]
+
+[project.scripts]
+quizforge_ai = "quizforge_ai.main:run"
+run_crew = "quizforge_ai.main:run"
+train = "quizforge_ai.main:train"
+replay = "quizforge_ai.main:replay"
+test = "quizforge_ai.main:test"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.crewai]
+type = "crew"
